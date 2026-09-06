@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    background: #f4f5f7;
+    color: #333;
+}
+
+.header {
+    background: #222;
+    color: white;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav h1 {
+    font-size: 24px;
+}
+
+.nav nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: white;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #777;
+}
+
+.movies {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.movies > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.movie-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-image {
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    background: #e9ecef;
+}
+
+.movie-content {
+    padding: 20px;
+}
+
+.movie-content h3 {
+    margin-bottom: 12px;
+}
+
+.movie-content p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.movie-content a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.about {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+}
+
+.about p {
+    margin-top: 15px;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #222;
+    color: white;
+}
+
+/* 平板 */
+@media (max-width: 768px) {
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 手机 */
+@media (max-width: 500px) {
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .movie-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav nav {
+        gap: 15px;
+    }
+}
